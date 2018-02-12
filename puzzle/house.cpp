@@ -82,7 +82,7 @@ bool house_::HasAttribute(eATT v)
     return false;
 }
 
-bool house_::RemoveAttribute(eATT v)
+void house_::RemoveAttribute(eATT v)
 {
   for(int i=0;i<25;i++)
       if (Attributes.All[i]==v)

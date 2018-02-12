@@ -12,7 +12,7 @@ public:
     bool HasSingleAttribute(ATYPE n,eATT v);
     eATT HasSingleTYPE(ATYPE n);
     bool HasAttribute(eATT v);
-    bool RemoveAttribute(eATT v);
+    void RemoveAttribute(eATT v);
     eATT *SelectIntoFive(ATYPE n);
     void print();
 };

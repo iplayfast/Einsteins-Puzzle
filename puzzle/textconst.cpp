@@ -1,5 +1,4 @@
 #include "textconst.h"
-const char *tHouse[5] = {"House1,","House2,","House3,","House4,","House5"};
 const char *tNation[5] = {"Brit,","Swede,","Dane,","Norwegian,","German"};
 const char *tDrink[5] = {"Tea,","Coffee,","Water,","Beer,","Milk"};
 const char *tColour[5]= {"Red,","Green,","White,","Yellow,","Blue"};
@@ -35,8 +34,9 @@ ATYPE FindAType(eATT v)
     case BLEND:
     case BMASTER:
     case PRINCE: return S;
-    case NOTHING: return S;
+    case NOTHING: break; // should never get here
     }
+    return S;
 }
 
 const char *FindAttText(eATT v)
@@ -69,4 +69,5 @@ const char *FindAttText(eATT v)
     case PRINCE:  	return tSmoke[4];
     case NOTHING: return "";
     }
+    return "";
 }
